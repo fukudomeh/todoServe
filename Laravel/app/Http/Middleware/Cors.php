@@ -12,7 +12,7 @@ class Cors
         $paths = explode('/', \Request::getPathInfo());
         if ($paths[1] === 'api') {
             return $next($request)
-                ->header('Access-Control-Allow-Origin', 'localhost')
+                ->header('Access-Control-Allow-Origin', 'http://localhost')
                 ->header('Access-Control-Allow-Methods', 'GET, POST,PUT,DELETE')
                 // ->header('Access-Control-Allow-Headers', 'Accept, X-Requested-With, Origin, Content-Type');
                 ->header('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
