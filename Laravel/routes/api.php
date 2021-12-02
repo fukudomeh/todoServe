@@ -1,7 +1,10 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListController;
+use App\Http\Controllers\CreateController;
+use App\Http\Controllers\UpdateController;
+use App\Http\Controllers\DeleteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +21,14 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 Route::middleware(['cors'])->group(function () {
+    Route::options('accounts', function () {
+        return response()->json();
+    });
+
+    Route::get('/',ListController::class);
+        Route::post('/create',CreateController::class);
+        Route::put('/update/{id}',UpdateController::class);
+        Route::delete('/delete/{id}', DeleteController::class);
+        
     
-Route::get('/',ListController::class);
-Route::post('/create',CreateController::class);
-Route::put('/update/{id}',UpdateController::class);
-Route::delete('/delete/{id}', DeleteController::class);
 });
