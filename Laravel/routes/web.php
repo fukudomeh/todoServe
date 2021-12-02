@@ -15,7 +15,7 @@ use App\Http\Controllers\DeleteController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('sample', function () { echo 'sample api'; });
+
 Route::get('/',ListController::class);
 Route::post('/create',CreateController::class);
 Route::put('/update/{id}',UpdateController::class);

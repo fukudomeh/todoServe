@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 Route::middleware(['cors'])->group(function () {
-    Route::options('accounts', function () {
-        return response()->json();
-    });
-
-    Route::post('accounts', 'AccountController@create');
+    
+Route::get('/',ListController::class);
+Route::post('/create',CreateController::class);
+Route::put('/update/{id}',UpdateController::class);
+Route::delete('/delete/{id}', DeleteController::class);
 });
