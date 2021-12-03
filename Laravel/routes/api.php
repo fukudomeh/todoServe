@@ -30,3 +30,9 @@ Route::middleware(['cors'])->group(function () {
         // Route::put('/update/{id}',"UpdateController");
         // Route::delete('/delete/{id}', "DeleteController");
 });
+// });
+Route::middleware(['cors'])->group(function () {
+    Route::get('/', function () {
+        return response()->json();
+    });
+});
