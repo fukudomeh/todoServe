@@ -16,7 +16,7 @@ use App\Http\Controllers\DeleteController;
 |
 */
 
-Route::get('/',ListController::class);
-Route::post('/create',CreateController::class);
-Route::put('/update/{id}',UpdateController::class);
-Route::delete('/delete/{id}', DeleteController::class);
+// Route::get('/',ListController::class);
+// Route::post('/create',CreateController::class);
+// Route::put('/update/{id}',UpdateController::class);
+// Route::delete('/delete/{id}', DeleteController::class);
