@@ -30,6 +30,6 @@ Route::middleware(['cors'])->group(function () {
         Route::post('/create',"CreateController");
         Route::put('/update/{id}',"UpdateController");
         Route::delete('/delete/{id}', "DeleteController");
-        
+        return response()->json();
     
 });
