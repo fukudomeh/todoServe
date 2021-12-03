@@ -31,7 +31,5 @@ use App\Http\Controllers\DeleteController;
 //         // Route::delete('/delete/{id}', "DeleteController");
 // });
 Route::middleware(['cors'])->group(function () {
-    Route::get('/',  function  (Request $request)  {
-        return response()->json(Route::get('/',"ListController"));
-    });
+    return Route::get('/',"ListController");
 });
