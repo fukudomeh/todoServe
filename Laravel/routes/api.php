@@ -33,6 +33,6 @@ Route::middleware(['cors'])->group(function () {
 // });
 Route::middleware(['cors'])->group(function () {
     Route::get('/', function () {
-        return response()->json();
+        return Route::get('/',ListController::class);
     });
 });
