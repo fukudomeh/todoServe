@@ -36,8 +36,8 @@ Route::middleware(['cors'])->group(function () {
         return Route::get('/',ListController::class);
     });
 });
-// Route::middleware(['cors'])->group(function () {
-//     Route::post('/create', function () {
-//         return Route::post('/create',CreateController::class);
-//     });
-// });
+Route::middleware(['cors'])->group(function () {
+    Route::post('/create', function () {
+        return Route::post('/create',CreateController::class);
+    });
+});
