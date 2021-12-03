@@ -25,11 +25,8 @@ Route::middleware(['cors'])->group(function () {
     // Route::options('accounts', function () {
     //     return response()->json();
     // });
-    Route::options('accounts', function () {
     Route::get('/',"ListController");
-        Route::post('/create',"CreateController");
-        Route::put('/update/{id}',"UpdateController");
-        Route::delete('/delete/{id}', "DeleteController");
-        return response()->json();
-    });
+        // Route::post('/create',"CreateController");
+        // Route::put('/update/{id}',"UpdateController");
+        // Route::delete('/delete/{id}', "DeleteController");
 });
